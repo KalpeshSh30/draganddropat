@@ -15,7 +15,7 @@ class App extends Component {
         { id: 'Q4', content: "When is rent due and how do I pay it?", ans: '12th of every month' },
         { id: 'Q5', content: "Is the security deposit refundable", ans: 'Partial' }
       ],
-      textArea: `This product development agreement is entered into by and between [Sender.Company], \nthe Provider, and [Client.Company], \nthe Client, as of [Agreement.CreatedDate].`,
+      textArea: `Client Name : \nClient Company : \nAddress : `,
       position: 0
     }
   }
@@ -44,7 +44,7 @@ class App extends Component {
       position: evt.target.selectionStart
     })
   }
-
+  
   render() {
     return (
       <div>
@@ -60,7 +60,7 @@ class App extends Component {
               className='draggable-questions-list'
             >
               <h2>Questionnaire</h2>
-              <div style={{ margin: 8 }}>
+              <div style={{ margin: 8 }} >
                 <Droppable droppableId={'itemsFromBackend'} key={'itemsFromBackend'}>
                   {(provided, snapshot) => {
                     return (
